@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="/dist/rpgui.css" rel="stylesheet" type="text/css" />
+
+    <script src="/dist/rpgui.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-black">
+    <div class="rpgui-content">
+      <div class="flex flex-row">
+        <!--Side menu-->
+        <div class="hidden md:flex flex-col">
+          <div class="rpgui-container framed md: h-[80vh] md:w-[20vw]">
+            <ul class="my-4 mx-auto">
+              <li class="p-4"><h1>Home</h1></li>
+              <li class="p-4"><h1>Status</h1></li>
+              <li class="p-4"><h1>Skills</h1></li>
+              <li class="p-4"><h1>Quests</h1></li>
+              <li class="p-4"><h1>Contact</h1></li>
+              <li class="p-4"><h1>About</h1></li>
+            </ul>
+          </div>
+
+          <div class="rpgui-container framed mt-[80vh] md:h-[20vh] md:w-[20vw]">
+            <h1>[Ícones]</h1>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div
+            class="rpgui-container framed flex flex-col w-[100vw] md:w-[80vw] md:ml-[20vw] md: h-[15vh]"
+          >
+            <div>
+              <h1 class="flex sm:hidden">Mobile Breakpoint</h1>
+              <h1 class="hidden sm:flex md:hidden lg:hidden">SM Breakpoint</h1>
+              <h1 class="hidden sm:hidden md:flex lg:hidden">MD Breakpoint</h1>
+              <h1 class="hidden sm:hidden md:hidden lg:flex">LG Breakpoint</h1>
+            </div>
+          </div>
+
+          <div
+            class="rpgui-container framed w-[100vw] h-[100%] md:w-[80vw] md:mt-[15vh] md:ml-[20vw] md:h-[85vh]"
+          >
+            <div class="flex flex-row items-center mx-auto my-20 p-12">
+              <div class="text-center p-12">
+                <div
+                  class="rpgui-container framed-golden rpgui-draggable text-left flex flex-col top-[20vh] min-h-[60vh] w-[35%] md:mx-auto"
+                >
+                  <h2>Heric Mendes</h2>
+                  <h2>Level 31</h2>
+                  <p></p>
+                  <h2>Front-end Dev.</h2>
+
+                  <hr class="golden my-2" />
+
+                  <div class="my-2">
+                    <label>Health</label>
+                    <div id="red-bar" class="rpgui-progress red"></div>
+
+                    <label>Coding Exp.</label>
+                    <div class="rpgui-progress blue"></div>
+
+                    <label>Hours of Sleep</label>
+                    <div class="rpgui-progress green"></div>
+                  </div>
+                  <div class="pt-2">
+
+                    <h3>Main Skills</h3>
+                    <div class="flex  items-center justify-evenly">
+                      <div class="rpgui-icon sword"></div>
+                      <div class="rpgui-icon shield"></div>
+                      <div class="rpgui-icon potion-red"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rpgui-container hidden md:flex px-12">
+                <img class="fixed  md:right-[20px] lg:right-[10%] bottom-3 h-[80%]" src="/dist/avatar.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
