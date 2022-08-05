@@ -10,21 +10,26 @@
 
     <script src="/dist/rpgui.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    >
   </head>
 
   <body class="bg-black">
     <div class="rpgui-content">
       <div class="flex flex-row">
         <!--Side menu-->
-        <div class="hidden md:flex flex-col">
-          <div class="rpgui-container framed md: h-[80vh] md:w-[20vw]">
+        <div class="hidden sm:flex flex-col">
+          <div
+            class="rpgui-container hidden sm:flex framed h-[80vh] md:w-[20vw]"
+          >
             <ul class="my-4 mx-auto">
-              <li class="p-4"><h1>Home</h1></li>
-              <li class="p-4"><h1>Status</h1></li>
-              <li class="p-4"><h1>Skills</h1></li>
-              <li class="p-4"><h1>Quests</h1></li>
-              <li class="p-4"><h1>Contact</h1></li>
-              <li class="p-4"><h1>About</h1></li>
+              <li class="py-4"><p>Home</p></li>
+              <li class="py-4"><p>Status</p></li>
+              <li class="py-4"><p>Skills</p></li>
+              <li class="py-4"><p>Quests</p></li>
+              <li class="py-4"><p>Contact</p></li>
+              <li class="py-4"><p>About</p></li>
             </ul>
           </div>
 
@@ -35,23 +40,78 @@
 
         <div class="flex flex-col">
           <div
-            class="rpgui-container framed flex flex-col w-[100vw] md:w-[80vw] md:ml-[20vw] md: h-[15vh]"
+            class="rpgui-container framed md:framed-golden-2 flex flex-col mt-[80vh] h-[20vh] md:h-[15vh] w-[100vw] md:w-[80vw] md:ml-[20vw] md:mt-0  "
           >
-            <div>
-              <h1 class="flex sm:hidden">Mobile Breakpoint</h1>
-              <h1 class="hidden sm:flex md:hidden lg:hidden">SM Breakpoint</h1>
-              <h1 class="hidden sm:hidden md:flex lg:hidden">MD Breakpoint</h1>
-              <h1 class="hidden sm:hidden md:hidden lg:flex">LG Breakpoint</h1>
+            <h1 class="hidden md:flex m-auto">Heric's Portfolio - Main Page</h1>
+            <div class="inline-flex flex-row md:hidden text-center items-center justify-between overflow-x-auto overflow-y-hidden ">
+              <div class="rpgui-icon weapon-slot w-[75px] h-[75px] mx-3"><p class="mt-[30px]">Home</p></div>
+              <div class="rpgui-icon shield-slot  w-[75px] h-[75px] mx-3"><p class="mt-[30px]">Status</div>
+              <div class="rpgui-icon armor-slot  w-[75px] h-[75px] mx-3"><p class="mt-[30px]">Skills</div>
+              <div class="rpgui-icon helmet-slot  w-[75px] h-[75px] mx-3"><p class="mt-[30px]">Quests</div>
+              <div class="rpgui-icon ring-slot  w-[75px] h-[75px] mx-3"><p class="mt-[30px] text-center">Contact</div>
+              <div class="rpgui-icon potion-slot  w-[75px] h-[75px] mx-3"><p class="mt-[30px]">About</div>
+
             </div>
           </div>
 
           <div
-            class="rpgui-container framed w-[100vw] h-[100%] md:w-[80vw] md:mt-[15vh] md:ml-[20vw] md:h-[85vh]"
+            class="rpgui-container framed w-[100vw] h-[80vh] md:h-[85vh] md:mt-[15vh] w-[100vw] md:w-[80vw] md:ml-[20vw]"
           >
-            <div class="flex flex-row items-center mx-auto my-20 p-12">
-              <div class="text-center p-12">
+            <!--Debug msg - Delete later-->
+            <div class="m-auto hidden">
+              <p class="flex sm:hidden">Mobile Breakpoint</p>
+              <p class="hidden sm:flex md:hidden lg:hidden">SM Breakpoint</p>
+              <p class="hidden sm:hidden md:flex lg:hidden">MD Breakpoint</p>
+              <p class="hidden sm:hidden md:hidden lg:flex">LG Breakpoint</p>
+            </div>
+
+            <!--Mobile Screen-->
+            <div
+              class="flex flex-col sm:hidden justify-between mx-auto my-2 p-4 w-[100%] h-[70vh] overflow-y-auto"
+            >
+              <div class="my-4">
+                <div class="flex w-[70%] mx-auto mb-4">
+                  <img src="/dist/retrato_ff.jpg" alt="" />
+                </div>
+                <h1>Heric Mendes</h1>
+                <h2>Level 31</h2>
+                <p></p>
+                <h2>Front-end Dev.</h2>
+
+                <hr class="golden my-2" />
+
+                <label>Health</label>
+                <div id="red-bar" class="rpgui-progress red"></div>
+
+                <label>Coding Exp.</label>
+                <div id="exp-bar" class="rpgui-progress purple"></div>
+
+                <label>Hours of Sleep</label>
+                <div id="sleep-bar" class="rpgui-progress green"></div>
+
+                <hr class="golden my-4" />
+                <div>
+                  <h1>Main Skills</h1>
+                  <div class="flex items-center justify-evenly mb-[50px]">
+                    <div class="rpgui-icon sword w-[75px] h-[75px]"></div>
+                    <div class="rpgui-icon shield w-[75px] h-[75px]"></div>
+                    <div class="rpgui-icon potion-red w-[75px] h-[75px]"></div>
+                  </div>
+                </div>
+    
+              </div>
+       
+             
+              </div>
+            </div>
+
+            <!--Desktop Screen-->
+            <div
+              class="hidden sm:flex flex-row items-center mx-auto my-20 p-12"
+            >
+              <div class="text-center p-4">
                 <div
-                  class="rpgui-container framed-golden rpgui-draggable text-left flex flex-col top-[20vh] min-h-[60vh] w-[35%] md:mx-auto"
+                  class="rpgui-container framed rpgui-draggable hidden text-left sm:flex sm:flex-col top-[5vh] md:top-[25vh] min-h-[60vh] md:w-[35%] md:ml-[24vw]"
                 >
                   <h2>Heric Mendes</h2>
                   <h2>Level 31</h2>
@@ -65,24 +125,29 @@
                     <div id="red-bar" class="rpgui-progress red"></div>
 
                     <label>Coding Exp.</label>
-                    <div class="rpgui-progress blue"></div>
+                    <div id="exp-bar" class="rpgui-progress purple"></div>
 
                     <label>Hours of Sleep</label>
-                    <div class="rpgui-progress green"></div>
+                    <div id="sleep-bar" class="rpgui-progress green"></div>
                   </div>
                   <div class="pt-2">
-
                     <h3>Main Skills</h3>
-                    <div class="flex  items-center justify-evenly">
-                      <div class="rpgui-icon sword"></div>
-                      <div class="rpgui-icon shield"></div>
-                      <div class="rpgui-icon potion-red"></div>
+                    <div class="flex items-center justify-evenly">
+                      <div class="rpgui-icon sword w-[75px] h-[75px]"></div>
+                      <div class="rpgui-icon shield w-[75px] h-[75px]w-[75px] h-[75px]"></div>
+                      <div class="rpgui-icon potion-red w-[75px] h-[75px]"></div>
                     </div>
                   </div>
+
                 </div>
+                
               </div>
-              <div class="rpgui-container hidden md:flex px-12">
-                <img class="fixed  md:right-[20px] lg:right-[10%] bottom-3 h-[80%]" src="/dist/avatar.png" alt="">
+              <div class="rpgui-container hidden sm:flex px-12">
+                <img
+                  class="fixed sm:right-0 sm:bottom-[22vh] md:h-[80%] md:right-0 md:ml-8 lg:mx-[50px] md:bottom-3 h-[70%] -z-1"
+                  src="/dist/avatar_anime.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>

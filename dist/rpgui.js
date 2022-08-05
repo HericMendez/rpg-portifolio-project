@@ -1,3 +1,5 @@
+
+
 RPGUI = (function() {
 
 /**
@@ -98,7 +100,9 @@ RPGUI.update = function(element)
 RPGUI.set_value = function(element, value)
 {
     // if have set value callback for this type, use it
+
     var type = element.dataset['rpguitype'];
+
     if (RPGUI.__set_funcs[type])
     {
         RPGUI.__set_funcs[type](element, value);
@@ -338,6 +342,7 @@ RPGUI.__set_funcs["progress"] = function(elem, value)
 	progress.style.width = (value * 100) + "%";
 };
 
+
 // init all progress elements on page load
 RPGUI.on_load(function()
 {
@@ -386,10 +391,23 @@ function create_progress(elem)
 	if (RPGUI.has_class(elem, "blue")) {progress.className += " blue";}
 	if (RPGUI.has_class(elem, "red")) {progress.className += " red";}
 	if (RPGUI.has_class(elem, "green")) {progress.className += " green";}
+	if (RPGUI.has_class(elem, "purple")) {progress.className += " purple";}
 
 	// set starting default value
 	var starting_val = elem.dataset.value !== undefined ? parseFloat(elem.dataset.value) : 1;
 	RPGUI.set_value(elem, starting_val);
+
+	var progress = document.getElementById("red-bar");
+	RPGUI.set_value(progress, 0.8);
+
+	var progress = document.getElementById("exp-bar");
+	RPGUI.set_value(progress, 0.70);
+
+	var progress = document.getElementById("sleep-bar");
+	RPGUI.set_value(progress, 0.2);
+
+	
+	//aqui
 }
 
 /**
@@ -1026,3 +1044,7 @@ RPGUI.insert_after = function(to_insert, after_element)
     after_element.parentNode.insertBefore(to_insert, after_element.nextSibling);
 };
 return RPGUI;})();
+
+
+var progress = document.getElementById("red-bar");
+
