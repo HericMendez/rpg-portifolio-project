@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link href="/dist/_variables.css" rel="stylesheet" type="text/css" />
     <link href="/dist/rpgui.css" rel="stylesheet" type="text/css" />
 
+    <script src="/dist/themes.js"></script>
     <script src="/dist/rpgui.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -70,8 +72,8 @@
               class="flex flex-col sm:hidden justify-between mx-auto my-2 p-4 w-[100%] h-[70vh] overflow-y-auto"
             >
               <div class="my-4">
-                <div class="flex w-[70%] mx-auto mb-4">
-                  <img src="/dist/retrato_ff.jpg" alt="" />
+                <div class="flex w-[70%] mx-auto mb-4 ">
+                  <img class="retrato-avatar" src="/dist/img/art/retrato_borda_ff.jpg" alt="" />
                 </div>
                 <h1>Heric Mendes</h1>
                 <h2>Level 31</h2>
@@ -81,13 +83,13 @@
                 <hr class="golden my-2" />
 
                 <label>Health</label>
-                <div id="red-bar" class="rpgui-progress red"></div>
+                <div id="red-bar-mobile" class="rpgui-progress red"></div>
 
                 <label>Coding Exp.</label>
-                <div id="exp-bar" class="rpgui-progress purple"></div>
+                <div id="exp-bar-mobile" class="rpgui-progress purple"></div>
 
                 <label>Hours of Sleep</label>
-                <div id="sleep-bar" class="rpgui-progress green"></div>
+                <div id="sleep-bar-mobile" class="rpgui-progress green"></div>
 
                 <hr class="golden my-4" />
                 <div>
@@ -145,7 +147,7 @@
               <div class="rpgui-container hidden sm:flex px-12">
                 <img
                   class="fixed sm:right-0 sm:bottom-[22vh] md:h-[80%] md:right-0 md:ml-8 lg:mx-[50px] md:bottom-3 h-[70%] -z-1"
-                  src="/dist/avatar_anime.png"
+                  src="/dist/img/art/avatar_pxArt.png"
                   alt=""
                 />
               </div>
